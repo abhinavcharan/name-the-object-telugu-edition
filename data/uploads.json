@@ -1,51 +1,77 @@
-import json
-import os
-
-# Create data directory if it doesn't exist
-os.makedirs('data', exist_ok=True)
-
-# Sample uploads data
-uploads_data = [
-    {
-        "id": "upload_001",
-        "username": "telugu_user",
-        "filename": "telugu_temple.jpg",
-        "original_filename": "my_temple_photo.jpg",
-        "upload_date": "2025-09-07T12:30:45",
-        "file_size": 2457600,
-        "file_type": "image/jpeg",
-        "description": "A beautiful ancient Telugu temple architecture",
-        "tags": ["temple", "architecture", "heritage", "ancient"],
-        "region": "Guntur",
-        "status": "approved",
-        "approved_by": "admin_user",
-        "approval_date": "2025-09-07T12:45:30",
-        "view_count": 15,
-        "download_count": 3,
-        "ai_caption": "A traditional South Indian temple with intricate carvings and gopuram tower",
-        "user_caption": "Ancient temple showing our rich cultural heritage"
-    },
-    {
-        "id": "upload_002", 
-        "username": "heritage_lover",
-        "filename": "traditional_utensils.jpg",
-        "original_filename": "kitchen_items.jpg",
-        "upload_date": "2025-09-06T15:20:10",
-        "file_size": 1835008,
-        "file_type": "image/jpeg",
-        "description": "Traditional Telugu kitchen utensils used in cooking",
-        "tags": ["utensils", "kitchen", "traditional", "cooking"],
-        "region": "Vijayawada",
-        "status": "pending",
-        "view_count": 8,
-        "download_count": 1,
-        "ai_caption": "Various brass and copper vessels arranged on a wooden surface",
-        "user_caption": "Traditional vessels used in Telugu households for generations"
-    }
+[
+  {
+    "id": "upload_001",
+    "username": "telugu_user",
+    "filename": "telugu_temple.jpg",
+    "original_filename": "my_temple_photo.jpg",
+    "upload_date": "2025-09-07T12:30:45",
+    "file_size": 2457600,
+    "file_type": "image/jpeg",
+    "description": "A beautiful ancient Telugu temple architecture",
+    "tags": ["temple", "architecture", "heritage", "ancient"],
+    "region": "Guntur",
+    "status": "approved",
+    "approved_by": "admin_user",
+    "approval_date": "2025-09-07T12:45:30",
+    "view_count": 15,
+    "download_count": 3,
+    "ai_caption": "A traditional South Indian temple with intricate carvings and gopuram tower",
+    "user_caption": "Ancient temple showing our rich cultural heritage"
+  },
+  {
+    "id": "upload_002", 
+    "username": "heritage_lover",
+    "filename": "traditional_utensils.jpg",
+    "original_filename": "kitchen_items.jpg",
+    "upload_date": "2025-09-06T15:20:10",
+    "file_size": 1835008,
+    "file_type": "image/jpeg",
+    "description": "Traditional Telugu kitchen utensils used in cooking",
+    "tags": ["utensils", "kitchen", "traditional", "cooking"],
+    "region": "Vijayawada",
+    "status": "pending",
+    "view_count": 8,
+    "download_count": 1,
+    "ai_caption": "Various brass and copper vessels arranged on a wooden surface",
+    "user_caption": "Traditional vessels used in Telugu households for generations"
+  },
+  {
+    "id": "upload_003",
+    "username": "culture_keeper",
+    "filename": "telugu_saree_design.jpg",
+    "original_filename": "saree_pattern.jpg",
+    "upload_date": "2025-09-05T09:45:22",
+    "file_size": 3145728,
+    "file_type": "image/jpeg",
+    "description": "Intricate border design of a traditional Telugu silk saree",
+    "tags": ["saree", "clothing", "textile", "design", "traditional"],
+    "region": "Hyderabad",
+    "status": "approved",
+    "approved_by": "moderator_user",
+    "approval_date": "2025-09-05T10:15:40",
+    "view_count": 22,
+    "download_count": 5,
+    "ai_caption": "Close-up view of elaborate zari work on silk fabric",
+    "user_caption": "Beautiful zari border pattern on Pochampally silk saree"
+  },
+  {
+    "id": "upload_004",
+    "username": "art_collector",
+    "filename": "telugu_folk_art.jpg",
+    "original_filename": "folk_painting.jpg",
+    "upload_date": "2025-09-04T14:35:18",
+    "file_size": 4194304,
+    "file_type": "image/jpeg",
+    "description": "Traditional Telugu folk art painting depicting rural life",
+    "tags": ["art", "painting", "folk", "traditional", "rural"],
+    "region": "Warangal",
+    "status": "rejected",
+    "rejected_by": "admin_user",
+    "rejection_date": "2025-09-04T15:10:05",
+    "rejection_reason": "Low image quality and unclear subject matter",
+    "view_count": 3,
+    "download_count": 0,
+    "ai_caption": "Colorful folk art painting showing village scene with people and animals",
+    "user_caption": "Traditional Cheriyal scroll painting artwork"
+  }
 ]
-
-# Write to file
-with open('data/uploads.json', 'w', encoding='utf-8') as f:
-    json.dump(uploads_data, f, indent=2, ensure_ascii=False)
-
-print("uploads.json file created successfully!")
