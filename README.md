@@ -15,5 +15,5 @@ A Streamlit web application that helps preserve Telugu heritage through technolo
 
 1. Clone the repository:
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/abhinavcharan/name-the-object-telugu-edition.git
 cd telugu-lens-app
